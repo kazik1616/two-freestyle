@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/cdStore/!svn/ver/108/trunk/cd_store/etc/eclipse
+END
+tomcat6-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/cdStore/!svn/ver/18/trunk/cd_store/etc/eclipse/tomcat6-config.xml
+END
+tomcat5.5.x-stop.launch
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/cdStore/!svn/ver/13/trunk/cd_store/etc/eclipse/tomcat5.5.x-stop.launch
+END
+tomcat5.5.x - cd store.launch
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/cdStore/!svn/ver/13/trunk/cd_store/etc/eclipse/tomcat5.5.x%20-%20cd%20store.launch
+END
+tomcat6 - cd store.launch
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/cdStore/!svn/ver/108/trunk/cd_store/etc/eclipse/tomcat6%20-%20cd%20store.launch
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/cdStore/!svn/ver/98/trunk/cd_store/etc/eclipse/log4j.properties
+END
+tomcat5.5.x-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/cdStore/!svn/ver/5/trunk/cd_store/etc/eclipse/tomcat5.5.x-config.xml
+END

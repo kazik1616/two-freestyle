@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cdStore/!svn/ver/17/trunk/cd_store/etc/tomcat5.x.x/common/lib
+END
+log4j-1.2.13.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/cdStore/!svn/ver/7/trunk/cd_store/etc/tomcat5.x.x/common/lib/log4j-1.2.13.jar
+END
+commons-logging.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/cdStore/!svn/ver/13/trunk/cd_store/etc/tomcat5.x.x/common/lib/commons-logging.jar
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/cdStore/!svn/ver/5/trunk/cd_store/etc/tomcat5.x.x/common/lib/readme.txt
+END
+servlet-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/cdStore/!svn/ver/17/trunk/cd_store/etc/tomcat5.x.x/common/lib/servlet-api.jar
+END
+hsqldb.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/cdStore/!svn/ver/7/trunk/cd_store/etc/tomcat5.x.x/common/lib/hsqldb.jar
+END
+log4j.LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/cdStore/!svn/ver/13/trunk/cd_store/etc/tomcat5.x.x/common/lib/log4j.LICENSE
+END

@@ -1,0 +1,47 @@
+8
+
+dir
+2
+http://localhost/svn/freestyle/trunk/freestyle/src
+http://localhost/svn/freestyle
+
+
+
+2008-05-27T17:13:23.546076Z
+2
+kazik
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ea441bf6-ee29-4fc5-b8ac-ab1510718a52
+
+META-INF
+dir
+
+com
+dir
+
+log4j.properties
+file
+26
+
+
+
+2008-05-31T08:42:11.000000Z
+f60668daf888a0889d1ec47cc893428d
+2008-06-01T12:35:50.548648Z
+26
+kazik
+has-props
+

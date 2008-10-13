@@ -1,0 +1,44 @@
+8
+
+dir
+2
+http://localhost/svn/freestyle/trunk/freestyle/web/WEB-INF
+http://localhost/svn/freestyle
+
+
+
+2008-05-27T17:13:23.546076Z
+2
+kazik
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ea441bf6-ee29-4fc5-b8ac-ab1510718a52
+
+lib
+dir
+
+web.xml
+file
+39
+
+
+
+2008-06-04T07:35:47.000000Z
+44e781aecd96e84a6070ebfdad63864f
+2008-06-04T07:48:40.877272Z
+39
+kazik
+has-props
+

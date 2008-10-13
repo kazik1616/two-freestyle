@@ -1,0 +1,41 @@
+8
+
+dir
+154
+http://svn2.assembla.com/svn/cdStore/trunk/cd_store/etc/tomcat5.x.x/common/classes
+http://svn2.assembla.com/svn/cdStore
+
+
+
+2008-04-25T20:53:21.541265Z
+2
+kazik1616
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+843fd666-81f2-4710-8602-7759cdb5ad05
+
+log4j.properties
+file
+
+
+
+
+2008-05-16T17:20:27.000000Z
+3ae785342d962aa05d368caea2bf9dbe
+2008-04-25T20:53:21.541265Z
+2
+kazik1616
+has-props
+

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/freestyle/!svn/ver/2/trunk/freestyle/src/com/kkazmierczyk/freestyle
+END
+Bots.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/freestyle/!svn/ver/22/trunk/freestyle/src/com/kkazmierczyk/freestyle/Bots.java
+END
+ReportsServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/freestyle/!svn/ver/39/trunk/freestyle/src/com/kkazmierczyk/freestyle/ReportsServlet.java
+END
+MainServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/freestyle/!svn/ver/39/trunk/freestyle/src/com/kkazmierczyk/freestyle/MainServlet.java
+END
+Bot.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/freestyle/!svn/ver/22/trunk/freestyle/src/com/kkazmierczyk/freestyle/Bot.java
+END
+StatisticsServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/freestyle/!svn/ver/37/trunk/freestyle/src/com/kkazmierczyk/freestyle/StatisticsServlet.java
+END
+BrowseDataServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/freestyle/!svn/ver/13/trunk/freestyle/src/com/kkazmierczyk/freestyle/BrowseDataServlet.java
+END
+DataManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/freestyle/!svn/ver/39/trunk/freestyle/src/com/kkazmierczyk/freestyle/DataManager.java
+END
+LoggedRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/freestyle/!svn/ver/7/trunk/freestyle/src/com/kkazmierczyk/freestyle/LoggedRequest.java
+END

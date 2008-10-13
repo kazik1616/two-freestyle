@@ -1,0 +1,41 @@
+8
+
+dir
+2
+http://localhost/svn/freestyle/trunk/freestyle/.settings
+http://localhost/svn/freestyle
+
+
+
+2008-05-27T17:13:23.546076Z
+2
+kazik
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ea441bf6-ee29-4fc5-b8ac-ab1510718a52
+
+org.eclipse.jdt.ui.prefs
+file
+
+
+
+
+2008-05-25T18:20:56.000000Z
+7b0c675d200d858ebf7588a21cabc200
+2008-05-27T17:13:23.546076Z
+2
+kazik
+has-props
+

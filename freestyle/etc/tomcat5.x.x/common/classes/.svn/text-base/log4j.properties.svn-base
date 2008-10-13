@@ -1,0 +1,70 @@
+
+# -------------------------------------------------------------------
+# Global logger configuration
+# -------------------------------------------------------------------
+
+log4j.rootLogger=DEBUG, fulllog, errorslog
+
+
+
+# -------------------------------------------------------------------
+# Named and special loggers
+# -------------------------------------------------------------------
+
+log4j.logger.com.dawidweiss=, applicationlog
+
+
+# -------------------------------------------------------------------
+# Disable certain libraries from spamming the output
+# -------------------------------------------------------------------
+
+# Catalina
+log4j.logger.org.apache.coyote=INFO
+log4j.logger.org.apache.catalina=INFO
+log4j.logger.org.apache.jasper=INFO
+log4j.logger.org.apache.jk=INFO
+log4j.logger.org.apache.tomcat=INFO
+
+# Apache commons
+log4j.logger.org.apache.commons=WARN
+
+# HttpClient
+log4j.logger.httpclient=WARN
+
+# JPOX
+log4j.logger.JPOX=WARN
+log4j.logger.JPOX.Enhancer=FATAL
+
+# AXIS
+log4j.logger.org.apache.axis=WARN
+
+
+# -------------------------------------------------------------------
+# Appenders
+# -------------------------------------------------------------------
+
+
+# Full log
+log4j.appender.fulllog=org.apache.log4j.FileAppender
+log4j.appender.fulllog.File=${catalina.home}/logs/full.log
+log4j.appender.fulllog.Append=true
+log4j.appender.fulllog.Encoding=UTF-8
+log4j.appender.fulllog.layout=org.apache.log4j.PatternLayout
+log4j.appender.fulllog.layout.ConversionPattern=%d{ISO8601},[%p],[%t],%c,%m%n
+
+# Warnings and errors only.
+log4j.appender.errorslog=org.apache.log4j.FileAppender
+log4j.appender.errorslog.File=${catalina.home}/logs/errors.log
+log4j.appender.errorslog.Append=true
+log4j.appender.errorslog.Threshold=WARN
+log4j.appender.errorslog.Encoding=UTF-8
+log4j.appender.errorslog.layout=org.apache.log4j.PatternLayout
+log4j.appender.errorslog.layout.ConversionPattern=%d{ISO8601},[%p],[%t],%c,%m%n
+
+# Application log (specific to a given logger path)
+log4j.appender.applicationlog=org.apache.log4j.FileAppender
+log4j.appender.applicationlog.File=${catalina.home}/logs/application.log
+log4j.appender.applicationlog.Append=true
+log4j.appender.applicationlog.Encoding=UTF-8
+log4j.appender.applicationlog.layout=org.apache.log4j.PatternLayout
+log4j.appender.applicationlog.layout.ConversionPattern=%d{ISO8601},[%p],[%t],%c,%m%n

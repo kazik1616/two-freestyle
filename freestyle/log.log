@@ -1,0 +1,750 @@
+00:07:57,338  INFO org.hibernate.ejb.Version - Hibernate EntityManager 3.2.0.CR3
+00:07:57,391  INFO org.hibernate.cfg.annotations.Version - Hibernate Annotations 3.2.0.CR3
+00:07:57,414  INFO org.hibernate.cfg.Environment - Hibernate 3.2.0.cr5
+00:07:57,421  INFO org.hibernate.cfg.Environment - hibernate.properties not found
+00:07:57,424  INFO org.hibernate.cfg.Environment - Bytecode provider name : cglib
+00:07:57,434  INFO org.hibernate.cfg.Environment - using JDK 1.4 java.sql.Timestamp handling
+00:07:57,689 DEBUG org.hibernate.ejb.Ejb3Configuration - Look up for persistence unit: com.kkazmierczyk.freestyle
+00:07:57,692 DEBUG org.hibernate.ejb.Ejb3Configuration - Analyse of persistence.xml: file:/home/kazik/workspaces/pp/freestyle/web/WEB-INF/classes/META-INF/persistence.xml
+00:07:57,752 DEBUG org.hibernate.util.DTDEntityResolver - trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+00:07:57,752 DEBUG org.hibernate.cfg.EJB3DTDEntityResolver - recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+00:07:57,753 DEBUG org.hibernate.cfg.EJB3DTDEntityResolver - located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+00:07:57,828 DEBUG org.hibernate.ejb.packaging.PersistenceXmlLoader - Persistent Unit name from persistence.xml: com.kkazmierczyk.freestyle
+00:07:57,832 DEBUG org.hibernate.ejb.Ejb3Configuration - PersistenceMetadata [
+	name: com.kkazmierczyk.freestyle
+	jtaDataSource: null
+	nonJtaDataSource: null
+	transactionType: RESOURCE_LOCAL
+	provider: null
+	classes[
+	]
+	packages[
+	]
+	mappingFiles[
+	]
+	jarFiles[
+	]
+	hbmfiles: 0
+	properties[
+		hibernate.c3p0.timeout: 300
+		hibernate.connection.autocommit: false
+		hibernate.connection.driver_class: org.hsqldb.jdbcDriver
+		hibernate.c3p0.max_statements: 20
+		hibernate.c3p0.max_size: 20
+		hibernate.dialect: org.hibernate.dialect.HSQLDialect
+		hibernate.c3p0.idle_test_period: 3000
+		hibernate.format_sql: true
+		hibernate.c3p0.min_size: 5
+		hibernate.connection.username: sa
+		hibernate.hbm2ddl.auto: update
+		hibernate.archive.autodetection: class, hbm
+		hibernate.connection.url: jdbc:hsqldb:file:./server_logger
+	]]
+00:07:57,837 DEBUG org.hibernate.ejb.Ejb3Configuration - Detect class: true; detect hbm: true
+00:07:57,845 DEBUG org.hibernate.ejb.packaging.JarVisitor - Searching mapped entities in jar/par: file:/home/kazik/workspaces/pp/freestyle/web/WEB-INF/classes
+00:07:57,845 DEBUG org.hibernate.ejb.packaging.JarVisitor - Filtering: com.kkazmierczyk.freestyle.LoggedRequest
+00:07:57,919 DEBUG org.hibernate.ejb.packaging.JarVisitor - Java element filter matched for com.kkazmierczyk.freestyle.LoggedRequest
+00:07:57,921 DEBUG org.hibernate.ejb.packaging.JarVisitor - Filtering: com.kkazmierczyk.freestyle.BrowseDataServlet
+00:07:57,929 DEBUG org.hibernate.ejb.packaging.JarVisitor - Filtering: com.kkazmierczyk.freestyle.ReportsServlet
+00:07:57,930 DEBUG org.hibernate.ejb.packaging.JarVisitor - Filtering: com.kkazmierczyk.freestyle.StatisticsServlet
+00:07:57,931 DEBUG org.hibernate.ejb.packaging.JarVisitor - Filtering: com.kkazmierczyk.freestyle.Bot
+00:07:57,931 DEBUG org.hibernate.ejb.packaging.JarVisitor - Filtering: com.kkazmierczyk.freestyle.MainServlet
+00:07:57,934 DEBUG org.hibernate.ejb.packaging.JarVisitor - Filtering: com.kkazmierczyk.freestyle.DataManager
+00:07:57,937 DEBUG org.hibernate.ejb.packaging.JarVisitor - Filtering: com.kkazmierczyk.freestyle.Bots
+00:07:57,937 DEBUG org.hibernate.ejb.Ejb3Configuration - Detect class: true; detect hbm: true
+00:07:57,937 DEBUG org.hibernate.ejb.Ejb3Configuration - Creating Factory: com.kkazmierczyk.freestyle
+00:07:58,034 DEBUG org.hibernate.cfg.AnnotationConfiguration - Execute first pass mapping processing
+00:07:58,127 DEBUG org.hibernate.cfg.AnnotationConfiguration - Process hbm files
+00:07:58,127 DEBUG org.hibernate.cfg.AnnotationConfiguration - Process annotated classes
+00:07:58,133  INFO org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.kkazmierczyk.freestyle.LoggedRequest
+00:07:58,157 DEBUG org.hibernate.cfg.Ejb3Column - Binding column DTYPE unique false
+00:07:58,180 DEBUG org.hibernate.cfg.annotations.EntityBinder - Import with entity name=LoggedRequest
+00:07:58,206  INFO org.hibernate.cfg.annotations.EntityBinder - Bind entity com.kkazmierczyk.freestyle.LoggedRequest on table LoggedRequest
+00:07:58,226 DEBUG org.hibernate.cfg.AnnotationBinder - Processing com.kkazmierczyk.freestyle.LoggedRequest property annotation
+00:07:58,266 DEBUG org.hibernate.cfg.AnnotationBinder - Processing com.kkazmierczyk.freestyle.LoggedRequest field annotation
+00:07:58,316 DEBUG org.hibernate.cfg.AnnotationBinder - Processing annotations of com.kkazmierczyk.freestyle.LoggedRequest.id
+00:07:58,318 DEBUG org.hibernate.cfg.Ejb3Column - Binding column id unique false
+00:07:58,318 DEBUG org.hibernate.cfg.AnnotationBinder - id is an id
+00:07:58,324 DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for id
+00:07:58,329 DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property id
+00:07:58,337 DEBUG org.hibernate.cfg.annotations.PropertyBinder - Cascading id with null
+00:07:58,337 DEBUG org.hibernate.cfg.AnnotationBinder - Bind @Id on id
+00:07:58,338 DEBUG org.hibernate.cfg.AnnotationBinder - Processing annotations of com.kkazmierczyk.freestyle.LoggedRequest.date
+00:07:58,338 DEBUG org.hibernate.cfg.Ejb3Column - Binding column date unique false
+00:07:58,338 DEBUG org.hibernate.cfg.annotations.PropertyBinder - binding property date with lazy=false
+00:07:58,338 DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for date
+00:07:58,339 DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property date
+00:07:58,339 DEBUG org.hibernate.cfg.annotations.PropertyBinder - Cascading date with null
+00:07:58,339 DEBUG org.hibernate.cfg.AnnotationBinder - Processing annotations of com.kkazmierczyk.freestyle.LoggedRequest.path
+00:07:58,339 DEBUG org.hibernate.cfg.Ejb3Column - Binding column path unique false
+00:07:58,339 DEBUG org.hibernate.cfg.annotations.PropertyBinder - binding property path with lazy=false
+00:07:58,339 DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for path
+00:07:58,339 DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property path
+00:07:58,339 DEBUG org.hibernate.cfg.annotations.PropertyBinder - Cascading path with null
+00:07:58,339 DEBUG org.hibernate.cfg.AnnotationBinder - Processing annotations of com.kkazmierczyk.freestyle.LoggedRequest.agent
+00:07:58,344 DEBUG org.hibernate.cfg.Ejb3Column - Binding column agent unique false
+00:07:58,344 DEBUG org.hibernate.cfg.annotations.PropertyBinder - binding property agent with lazy=false
+00:07:58,344 DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for agent
+00:07:58,345 DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property agent
+00:07:58,345 DEBUG org.hibernate.cfg.annotations.PropertyBinder - Cascading agent with null
+00:07:58,353 DEBUG org.hibernate.cfg.AnnotationConfiguration - processing manytoone fk mappings
+00:07:58,361 DEBUG org.hibernate.cfg.Configuration - processing extends queue
+00:07:58,361 DEBUG org.hibernate.cfg.Configuration - processing collection mappings
+00:07:58,361 DEBUG org.hibernate.cfg.Configuration - processing native query and ResultSetMapping mappings
+00:07:58,361 DEBUG org.hibernate.cfg.Configuration - processing association property references
+00:07:58,361 DEBUG org.hibernate.cfg.Configuration - processing foreign key constraints
+00:07:58,372 DEBUG org.hibernate.validator.ClassValidator - ResourceBundle ValidatorMessages not found in thread context classloader
+00:07:58,372 DEBUG org.hibernate.validator.ClassValidator - ResourceBundle ValidatorMessages not found in Validator classloader. Delegate to org.hibernate.validator.resources.DefaultValidatorMessages
+00:07:58,425  WARN org.hibernate.ejb.Ejb3Configuration - hibernate.connection.autocommit = false break the EJB3 specification
+00:07:58,438 DEBUG org.hibernate.ejb.util.NamingHelper - Not Ejb3Configuration to JNDI, no JNDI name configured
+00:07:58,440 DEBUG org.hibernate.cfg.Configuration - Preparing to build session factory with filters : {}
+00:07:58,440 DEBUG org.hibernate.cfg.AnnotationConfiguration - Execute first pass mapping processing
+00:07:58,440 DEBUG org.hibernate.cfg.AnnotationConfiguration - Process hbm files
+00:07:58,440 DEBUG org.hibernate.cfg.AnnotationConfiguration - Process annotated classes
+00:07:58,440 DEBUG org.hibernate.cfg.AnnotationConfiguration - processing manytoone fk mappings
+00:07:58,440 DEBUG org.hibernate.cfg.Configuration - processing extends queue
+00:07:58,440 DEBUG org.hibernate.cfg.Configuration - processing collection mappings
+00:07:58,441 DEBUG org.hibernate.cfg.Configuration - processing native query and ResultSetMapping mappings
+00:07:58,441 DEBUG org.hibernate.cfg.Configuration - processing association property references
+00:07:58,441 DEBUG org.hibernate.cfg.Configuration - processing foreign key constraints
+00:07:58,441 DEBUG org.hibernate.validator.ClassValidator - ResourceBundle ValidatorMessages not found in thread context classloader
+00:07:58,442 DEBUG org.hibernate.validator.ClassValidator - ResourceBundle ValidatorMessages not found in Validator classloader. Delegate to org.hibernate.validator.resources.DefaultValidatorMessages
+00:07:58,623  INFO org.hibernate.connection.C3P0ConnectionProvider - C3P0 using driver: org.hsqldb.jdbcDriver at URL: jdbc:hsqldb:file:./server_logger
+00:07:58,624  INFO org.hibernate.connection.C3P0ConnectionProvider - Connection properties: {user=sa, autocommit=false, release_mode=auto}
+00:07:58,624  INFO org.hibernate.connection.C3P0ConnectionProvider - autocommit mode: false
+00:07:59,903  INFO org.hibernate.cfg.SettingsFactory - RDBMS: HSQL Database Engine, version: 1.8.0
+00:07:59,904  INFO org.hibernate.cfg.SettingsFactory - JDBC driver: HSQL Database Engine Driver, version: 1.8.0
+00:07:59,933  INFO org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.HSQLDialect
+00:07:59,939  INFO org.hibernate.transaction.TransactionFactoryFactory - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+00:07:59,941  INFO org.hibernate.transaction.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+00:07:59,941  INFO org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+00:07:59,941  INFO org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+00:07:59,941  INFO org.hibernate.cfg.SettingsFactory - JDBC batch size: 15
+00:07:59,941  INFO org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+00:07:59,943  INFO org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+00:07:59,943 DEBUG org.hibernate.cfg.SettingsFactory - Wrap result sets: disabled
+00:07:59,943  INFO org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): disabled
+00:07:59,943  INFO org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+00:07:59,945  INFO org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+00:07:59,945  INFO org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+00:07:59,945  INFO org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+00:07:59,945  INFO org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+00:07:59,948  INFO org.hibernate.hql.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+00:07:59,948  INFO org.hibernate.cfg.SettingsFactory - Query language substitutions: {}
+00:07:59,948  INFO org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: enabled
+00:07:59,948  INFO org.hibernate.cfg.SettingsFactory - Second-level cache: enabled
+00:07:59,948  INFO org.hibernate.cfg.SettingsFactory - Query cache: disabled
+00:07:59,948  INFO org.hibernate.cfg.SettingsFactory - Cache provider: org.hibernate.cache.NoCacheProvider
+00:07:59,948  INFO org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+00:07:59,949  INFO org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+00:07:59,950 DEBUG org.hibernate.exception.SQLExceptionConverterFactory - Using dialect defined converter
+00:07:59,971  INFO org.hibernate.cfg.SettingsFactory - Statistics: disabled
+00:07:59,971  INFO org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+00:07:59,972  INFO org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+00:08:00,050 DEBUG org.hibernate.validator.ClassValidator - ResourceBundle ValidatorMessages not found in thread context classloader
+00:08:00,052 DEBUG org.hibernate.validator.ClassValidator - ResourceBundle ValidatorMessages not found in Validator classloader. Delegate to org.hibernate.validator.resources.DefaultValidatorMessages
+00:08:00,085  INFO org.hibernate.impl.SessionFactoryImpl - building session factory
+00:08:00,087 DEBUG org.hibernate.impl.SessionFactoryImpl - Session factory constructed with filter configurations : {}
+00:08:00,087 DEBUG org.hibernate.impl.SessionFactoryImpl - instantiating session factory with properties: {java.vendor=Sun Microsystems Inc., sun.java.launcher=SUN_STANDARD, catalina.base=/home/kazik/aplikacje/apache-tomcat-5.5.26, hibernate.connection.url=jdbc:hsqldb:file:./server_logger, sun.management.compiler=HotSpot Client Compiler, hibernate.ejb.discard_pc_on_close=false, catalina.useNaming=true, hibernate.transaction.flush_before_completion=false, os.name=Linux, sun.boot.class.path=/opt/jdk1.7.0/jre/lib/resources.jar:/opt/jdk1.7.0/jre/lib/rt.jar:/opt/jdk1.7.0/jre/lib/sunrsasign.jar:/opt/jdk1.7.0/jre/lib/jsse.jar:/opt/jdk1.7.0/jre/lib/jce.jar:/opt/jdk1.7.0/jre/lib/charsets.jar:/opt/jdk1.7.0/jre/classes, project.home=/home/kazik/workspaces/pp/freestyle, sun.desktop=gnome, hibernate.c3p0.max_size=20, java.vm.specification.vendor=Sun Microsystems Inc., java.runtime.version=1.7.0-ea-b23, hibernate.connection.autocommit=false, hibernate.c3p0.min_size=5, user.name=kazik, shared.loader=${catalina.base}/shared/classes,${catalina.base}/shared/lib/*.jar, log4j.configuration=file:////home/kazik/workspaces/pp/freestyle/etc/eclipse/log4j.properties, tomcat.util.buf.StringCache.byte.enabled=true, hibernate.connection.release_mode=auto, hibernate.c3p0.timeout=300, user.language=en, java.naming.factory.initial=org.apache.naming.java.javaURLContextFactory, sun.boot.library.path=/opt/jdk1.7.0/jre/lib/i386, java.version=1.7.0-ea, user.timezone=Europe/Warsaw, sun.arch.data.model=32, java.endorsed.dirs=/home/kazik/aplikacje/apache-tomcat-5.5.26/common/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, package.access=sun.,org.apache.catalina.,org.apache.coyote.,org.apache.tomcat.,org.apache.jasper.,sun.beans., file.separator=/, java.specification.name=Java Platform API Specification, hibernate.format_sql=true, java.class.version=50.0, user.country=GB, java.home=/opt/jdk1.7.0/jre, java.vm.info=mixed mode, sharing, os.version=2.6.22-14-generic, hibernate.transaction.factory_class=org.hibernate.transaction.JDBCTransactionFactory, hibernate.query.jpaql_strict_compliance=true, path.separator=:, java.vm.version=12.0-b01, java.awt.printerjob=sun.print.PSPrinterJob, sun.io.unicode.encoding=UnicodeLittle, hibernate.connection.username=sa, package.definition=sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.tomcat.,org.apache.jasper., java.naming.factory.url.pkgs=org.apache.naming, user.home=/home/kazik, java.specification.vendor=Sun Microsystems Inc., hibernate.hbm2ddl.auto=update, java.library.path=/opt/jdk1.7.0/jre/lib/i386/client:/opt/jdk1.7.0/jre/lib/i386:/opt/jdk1.7.0/jre/../lib/i386:/usr/lib/jvm/java-6-sun-1.6.0.06/jre/lib/i386/client:/usr/lib/jvm/java-6-sun-1.6.0.06/jre/lib/i386:/usr/lib/xulrunner-devel-1.9:/usr/lib/xulrunner-devel-1.9:/usr/java/packages/lib/i386:/lib:/usr/lib, java.vendor.url=http://java.sun.com/, hibernate.connection.driver_class=org.hsqldb.jdbcDriver, java.vm.vendor=Sun Microsystems Inc., hibernate.dialect=org.hibernate.dialect.HSQLDialect, common.loader=${catalina.home}/common/classes,${catalina.home}/common/i18n/*.jar,${catalina.home}/common/endorsed/*.jar,${catalina.home}/common/lib/*.jar, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.archive.autodetection=class, hbm, java.class.path=/home/kazik/aplikacje/apache-tomcat-5.5.26/bin/bootstrap.jar:/home/kazik/aplikacje/apache-tomcat-5.5.26/bin/commons-daemon.jar, hibernate.bytecode.use_reflection_optimizer=false, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.0, catalina.home=/home/kazik/aplikacje/apache-tomcat-5.5.26, sun.cpu.endian=little, sun.os.patch.level=unknown, java.io.tmpdir=/home/kazik/aplikacje/apache-tomcat-5.5.26/temp, java.vendor.url.bug=http://java.sun.com/cgi-bin/bugreport.cgi, server.loader=${catalina.home}/server/classes,${catalina.home}/server/lib/*.jar, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, os.arch=i386, java.ext.dirs=/opt/jdk1.7.0/jre/lib/ext:/usr/java/packages/lib/ext, user.dir=/home/kazik/workspaces/pp/freestyle, hibernate.c3p0.idle_test_period=3000, line.separator=
+, java.vm.name=Java HotSpot(TM) Client VM, file.encoding=UTF-8, hibernate.use_identifier_rollback=false, java.specification.version=1.7, hibernate.c3p0.max_statements=20}
+00:08:00,598 DEBUG org.hibernate.persister.entity.AbstractEntityPersister - Static SQL for entity: com.kkazmierczyk.freestyle.LoggedRequest
+00:08:00,598 DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Version select: select id from LoggedRequest where id =?
+00:08:00,598 DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Snapshot select: select loggedrequ_.id, loggedrequ_.date as date0_, loggedrequ_.path as path0_, loggedrequ_.agent as agent0_ from LoggedRequest loggedrequ_ where loggedrequ_.id=?
+00:08:00,598 DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Insert 0: insert into LoggedRequest (date, path, agent, id) values (?, ?, ?, ?)
+00:08:00,598 DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Update 0: update LoggedRequest set date=?, path=?, agent=? where id=?
+00:08:00,598 DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Delete 0: delete from LoggedRequest where id=?
+00:08:00,598 DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Identity insert: insert into LoggedRequest (id, date, path, agent) values (null, ?, ?, ?)
+00:08:00,624 DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity com.kkazmierczyk.freestyle.LoggedRequest: select loggedrequ0_.id as id0_0_, loggedrequ0_.date as date0_0_, loggedrequ0_.path as path0_0_, loggedrequ0_.agent as agent0_0_ from LoggedRequest loggedrequ0_ where loggedrequ0_.id=?
+00:08:00,625 DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity com.kkazmierczyk.freestyle.LoggedRequest: select loggedrequ0_.id as id0_0_, loggedrequ0_.date as date0_0_, loggedrequ0_.path as path0_0_, loggedrequ0_.agent as agent0_0_ from LoggedRequest loggedrequ0_ where loggedrequ0_.id=?
+00:08:00,626 DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity com.kkazmierczyk.freestyle.LoggedRequest: select loggedrequ0_.id as id0_0_, loggedrequ0_.date as date0_0_, loggedrequ0_.path as path0_0_, loggedrequ0_.agent as agent0_0_ from LoggedRequest loggedrequ0_ where loggedrequ0_.id=?
+00:08:00,626 DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity com.kkazmierczyk.freestyle.LoggedRequest: select loggedrequ0_.id as id0_0_, loggedrequ0_.date as date0_0_, loggedrequ0_.path as path0_0_, loggedrequ0_.agent as agent0_0_ from LoggedRequest loggedrequ0_ where loggedrequ0_.id=?
+00:08:00,626 DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity com.kkazmierczyk.freestyle.LoggedRequest: select loggedrequ0_.id as id0_0_, loggedrequ0_.date as date0_0_, loggedrequ0_.path as path0_0_, loggedrequ0_.agent as agent0_0_ from LoggedRequest loggedrequ0_ where loggedrequ0_.id=?
+00:08:00,638 DEBUG org.hibernate.loader.entity.EntityLoader - Static select for action ACTION_MERGE on entity com.kkazmierczyk.freestyle.LoggedRequest: select loggedrequ0_.id as id0_0_, loggedrequ0_.date as date0_0_, loggedrequ0_.path as path0_0_, loggedrequ0_.agent as agent0_0_ from LoggedRequest loggedrequ0_ where loggedrequ0_.id=?
+00:08:00,638 DEBUG org.hibernate.loader.entity.EntityLoader - Static select for action ACTION_REFRESH on entity com.kkazmierczyk.freestyle.LoggedRequest: select loggedrequ0_.id as id0_0_, loggedrequ0_.date as date0_0_, loggedrequ0_.path as path0_0_, loggedrequ0_.agent as agent0_0_ from LoggedRequest loggedrequ0_ where loggedrequ0_.id=?
+00:08:00,640 DEBUG org.hibernate.impl.SessionFactoryObjectFactory - initializing class SessionFactoryObjectFactory
+00:08:00,642 DEBUG org.hibernate.impl.SessionFactoryObjectFactory - registered: 167e0fee1a559f4a011a559f4c7f0000 (unnamed)
+00:08:00,642  INFO org.hibernate.impl.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+00:08:00,643 DEBUG org.hibernate.impl.SessionFactoryImpl - instantiated session factory
+00:08:00,647  INFO org.hibernate.tool.hbm2ddl.SchemaUpdate - Running hbm2ddl schema update
+00:08:00,647  INFO org.hibernate.tool.hbm2ddl.SchemaUpdate - fetching database metadata
+00:08:00,669  INFO org.hibernate.tool.hbm2ddl.SchemaUpdate - updating schema
+00:08:00,670 DEBUG org.hibernate.cfg.AnnotationConfiguration - Execute first pass mapping processing
+00:08:00,670 DEBUG org.hibernate.cfg.AnnotationConfiguration - Process hbm files
+00:08:00,670 DEBUG org.hibernate.cfg.AnnotationConfiguration - Process annotated classes
+00:08:00,670 DEBUG org.hibernate.cfg.AnnotationConfiguration - processing manytoone fk mappings
+00:08:00,670 DEBUG org.hibernate.cfg.Configuration - processing extends queue
+00:08:00,670 DEBUG org.hibernate.cfg.Configuration - processing collection mappings
+00:08:00,670 DEBUG org.hibernate.cfg.Configuration - processing native query and ResultSetMapping mappings
+00:08:00,670 DEBUG org.hibernate.cfg.Configuration - processing association property references
+00:08:00,670 DEBUG org.hibernate.cfg.Configuration - processing foreign key constraints
+00:08:00,671 DEBUG org.hibernate.validator.ClassValidator - ResourceBundle ValidatorMessages not found in thread context classloader
+00:08:00,671 DEBUG org.hibernate.validator.ClassValidator - ResourceBundle ValidatorMessages not found in Validator classloader. Delegate to org.hibernate.validator.resources.DefaultValidatorMessages
+00:08:00,771  INFO org.hibernate.tool.hbm2ddl.TableMetadata - table found: PUBLIC.LOGGEDREQUEST
+00:08:00,771  INFO org.hibernate.tool.hbm2ddl.TableMetadata - columns: [id, path, date, agent]
+00:08:00,771  INFO org.hibernate.tool.hbm2ddl.TableMetadata - foreign keys: []
+00:08:00,771  INFO org.hibernate.tool.hbm2ddl.TableMetadata - indexes: [sys_idx_46]
+00:08:00,772  INFO org.hibernate.tool.hbm2ddl.SchemaUpdate - schema update complete
+00:08:00,777 DEBUG org.hibernate.impl.SessionFactoryImpl - Checking 0 named HQL queries
+00:08:00,777 DEBUG org.hibernate.impl.SessionFactoryImpl - Checking 0 named SQL queries
+00:08:00,782  INFO com.kkazmierczyk.freestyle.MainServlet - Servlet initialized.
+00:08:04,450 DEBUG org.hibernate.impl.SessionImpl - opened session at timestamp: 12126172843
+00:08:04,467 DEBUG org.hibernate.transaction.JDBCTransaction - begin
+00:08:04,467 DEBUG org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+00:08:04,469 DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: false
+00:08:04,469 DEBUG org.hibernate.jdbc.JDBCContext - after transaction begin
+00:08:04,495 DEBUG org.hibernate.engine.query.QueryPlanCache - unable to locate HQL query plan in cache; generating (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:04,666 DEBUG org.hibernate.hql.ast.QueryTranslatorImpl - parse() - HQL: select year(date), month(date), day(date), count(*) from com.kkazmierczyk.freestyle.LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3
+00:08:04,708 DEBUG org.hibernate.hql.ast.AST - --- HQL AST ---
+ \-[QUERY] 'query'
+    +-[SELECT_FROM] 'SELECT_FROM'
+    |  +-[FROM] 'from'
+    |  |  \-[RANGE] 'RANGE'
+    |  |     +-[DOT] '.'
+    |  |     |  +-[DOT] '.'
+    |  |     |  |  +-[DOT] '.'
+    |  |     |  |  |  +-[IDENT] 'com'
+    |  |     |  |  |  \-[IDENT] 'kkazmierczyk'
+    |  |     |  |  \-[IDENT] 'freestyle'
+    |  |     |  \-[IDENT] 'LoggedRequest'
+    |  |     \-[ALIAS] 'lr'
+    |  \-[SELECT] 'select'
+    |     +-[METHOD_CALL] '('
+    |     |  +-[IDENT] 'year'
+    |     |  \-[EXPR_LIST] 'exprList'
+    |     |     \-[IDENT] 'date'
+    |     +-[METHOD_CALL] '('
+    |     |  +-[IDENT] 'month'
+    |     |  \-[EXPR_LIST] 'exprList'
+    |     |     \-[IDENT] 'date'
+    |     +-[METHOD_CALL] '('
+    |     |  +-[IDENT] 'day'
+    |     |  \-[EXPR_LIST] 'exprList'
+    |     |     \-[IDENT] 'date'
+    |     \-[COUNT] 'count'
+    |        \-[ROW_STAR] '*'
+    +-[WHERE] 'where'
+    |  \-[LIKE] 'like'
+    |     +-[DOT] '.'
+    |     |  +-[IDENT] 'lr'
+    |     |  \-[IDENT] 'agent'
+    |     \-[COLON] ':'
+    |        \-[IDENT] 'agent'
+    +-[GROUP] 'group'
+    |  +-[METHOD_CALL] '('
+    |  |  +-[IDENT] 'year'
+    |  |  \-[EXPR_LIST] 'exprList'
+    |  |     \-[IDENT] 'date'
+    |  +-[METHOD_CALL] '('
+    |  |  +-[IDENT] 'month'
+    |  |  \-[EXPR_LIST] 'exprList'
+    |  |     \-[IDENT] 'date'
+    |  \-[METHOD_CALL] '('
+    |     +-[IDENT] 'day'
+    |     \-[EXPR_LIST] 'exprList'
+    |        \-[IDENT] 'date'
+    \-[ORDER] 'order'
+       +-[NUM_INT] '1'
+       +-[NUM_INT] '2'
+       \-[NUM_INT] '3'
+
+00:08:04,708 DEBUG org.hibernate.hql.ast.ErrorCounter - throwQueryException() : no errors
+00:08:04,804 DEBUG org.hibernate.hql.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+00:08:04,863 DEBUG org.hibernate.hql.ast.tree.FromElement - FromClause{level=1} :  com.kkazmierczyk.freestyle.LoggedRequest (lr) -> loggedrequ0_
+00:08:04,873 DEBUG org.hibernate.hql.ast.HqlSqlWalker - attempting to resolve property [date] as a non-qualified ref
+00:08:04,873 DEBUG org.hibernate.hql.ast.tree.FromReferenceNode - Resolved :  {synthetic-alias} -> {synthetic-alias}
+00:08:04,873 DEBUG org.hibernate.hql.ast.tree.DotNode - getDataType() : date -> org.hibernate.type.TimestampType@167c5e3
+00:08:04,873 DEBUG org.hibernate.hql.ast.tree.FromReferenceNode - Resolved :  {synthetic-alias}.date -> loggedrequ0_.date
+00:08:04,875 DEBUG org.hibernate.hql.ast.HqlSqlWalker - attempting to resolve property [date] as a non-qualified ref
+00:08:04,875 DEBUG org.hibernate.hql.ast.tree.FromReferenceNode - Resolved :  {synthetic-alias} -> {synthetic-alias}
+00:08:04,876 DEBUG org.hibernate.hql.ast.tree.DotNode - getDataType() : date -> org.hibernate.type.TimestampType@167c5e3
+00:08:04,877 DEBUG org.hibernate.hql.ast.tree.FromReferenceNode - Resolved :  {synthetic-alias}.date -> loggedrequ0_.date
+00:08:04,877 DEBUG org.hibernate.hql.ast.HqlSqlWalker - attempting to resolve property [date] as a non-qualified ref
+00:08:04,877 DEBUG org.hibernate.hql.ast.tree.FromReferenceNode - Resolved :  {synthetic-alias} -> {synthetic-alias}
+00:08:04,877 DEBUG org.hibernate.hql.ast.tree.DotNode - getDataType() : date -> org.hibernate.type.TimestampType@167c5e3
+00:08:04,877 DEBUG org.hibernate.hql.ast.tree.FromReferenceNode - Resolved :  {synthetic-alias}.date -> loggedrequ0_.date
+00:08:04,885 DEBUG org.hibernate.hql.ast.tree.FromReferenceNode - Resolved :  lr -> loggedrequ0_.id
+00:08:04,885 DEBUG org.hibernate.hql.ast.tree.DotNode - getDataType() : agent -> org.hibernate.type.StringType@6d999a
+00:08:04,886 DEBUG org.hibernate.hql.ast.tree.FromReferenceNode - Resolved :  lr.agent -> loggedrequ0_.agent
+00:08:04,892 DEBUG org.hibernate.hql.ast.HqlSqlWalker - attempting to resolve property [date] as a non-qualified ref
+00:08:04,892 DEBUG org.hibernate.hql.ast.tree.FromReferenceNode - Resolved :  {synthetic-alias} -> {synthetic-alias}
+00:08:04,892 DEBUG org.hibernate.hql.ast.tree.DotNode - getDataType() : date -> org.hibernate.type.TimestampType@167c5e3
+00:08:04,892 DEBUG org.hibernate.hql.ast.tree.FromReferenceNode - Resolved :  {synthetic-alias}.date -> loggedrequ0_.date
+00:08:04,892 DEBUG org.hibernate.hql.ast.HqlSqlWalker - attempting to resolve property [date] as a non-qualified ref
+00:08:04,892 DEBUG org.hibernate.hql.ast.tree.FromReferenceNode - Resolved :  {synthetic-alias} -> {synthetic-alias}
+00:08:04,892 DEBUG org.hibernate.hql.ast.tree.DotNode - getDataType() : date -> org.hibernate.type.TimestampType@167c5e3
+00:08:04,893 DEBUG org.hibernate.hql.ast.tree.FromReferenceNode - Resolved :  {synthetic-alias}.date -> loggedrequ0_.date
+00:08:04,893 DEBUG org.hibernate.hql.ast.HqlSqlWalker - attempting to resolve property [date] as a non-qualified ref
+00:08:04,893 DEBUG org.hibernate.hql.ast.tree.FromReferenceNode - Resolved :  {synthetic-alias} -> {synthetic-alias}
+00:08:04,893 DEBUG org.hibernate.hql.ast.tree.DotNode - getDataType() : date -> org.hibernate.type.TimestampType@167c5e3
+00:08:04,893 DEBUG org.hibernate.hql.ast.tree.FromReferenceNode - Resolved :  {synthetic-alias}.date -> loggedrequ0_.date
+00:08:04,895 DEBUG org.hibernate.hql.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+00:08:04,895 DEBUG org.hibernate.hql.ast.HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} ( ( year ( exprList ( loggedrequ0_.date {synthetic-alias} date ) ) ) ( ( month ( exprList ( loggedrequ0_.date {synthetic-alias} date ) ) ) ( ( day ( exprList ( loggedrequ0_.date {synthetic-alias} date ) ) ) ( count * ) ) ( FromClause{level=1} LoggedRequest loggedrequ0_ ) ( where ( like ( loggedrequ0_.agent loggedrequ0_.id agent ) ? ) ) ( group ( ( year ( exprList ( loggedrequ0_.date {synthetic-alias} date ) ) ) ( ( month ( exprList ( loggedrequ0_.date {synthetic-alias} date ) ) ) ( ( day ( exprList ( loggedrequ0_.date {synthetic-alias} date ) ) ) ) ( order 1 2 3 ) )
+00:08:04,924 DEBUG org.hibernate.hql.ast.util.JoinProcessor - Using FROM fragment [LoggedRequest loggedrequ0_]
+00:08:04,925 DEBUG org.hibernate.hql.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+00:08:04,930 DEBUG org.hibernate.hql.ast.AST - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (LoggedRequest)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[METHOD_CALL] MethodNode: '('
+    |  |  +-[METHOD_NAME] IdentNode: 'year' {originalText=year}
+    |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+    |  |     \-[DOT] DotNode: 'loggedrequ0_.date' {propertyName=date,dereferenceType=4,propertyPath=date,path={synthetic-alias}.date,tableAlias=loggedrequ0_,className=com.kkazmierczyk.freestyle.LoggedRequest,classAlias=lr}
+    |  |        +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+    |  |        \-[IDENT] IdentNode: 'date' {originalText=date}
+    |  +-[SELECT_COLUMNS] SqlNode: ' as col_0_0_'
+    |  +-[METHOD_CALL] MethodNode: '('
+    |  |  +-[METHOD_NAME] IdentNode: 'month' {originalText=month}
+    |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+    |  |     \-[DOT] DotNode: 'loggedrequ0_.date' {propertyName=date,dereferenceType=4,propertyPath=date,path={synthetic-alias}.date,tableAlias=loggedrequ0_,className=com.kkazmierczyk.freestyle.LoggedRequest,classAlias=lr}
+    |  |        +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+    |  |        \-[IDENT] IdentNode: 'date' {originalText=date}
+    |  +-[SELECT_COLUMNS] SqlNode: ' as col_1_0_'
+    |  +-[METHOD_CALL] MethodNode: '('
+    |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+    |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+    |  |     \-[DOT] DotNode: 'loggedrequ0_.date' {propertyName=date,dereferenceType=4,propertyPath=date,path={synthetic-alias}.date,tableAlias=loggedrequ0_,className=com.kkazmierczyk.freestyle.LoggedRequest,classAlias=lr}
+    |  |        +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+    |  |        \-[IDENT] IdentNode: 'date' {originalText=date}
+    |  +-[SELECT_COLUMNS] SqlNode: ' as col_2_0_'
+    |  +-[COUNT] CountNode: 'count'
+    |  |  \-[ROW_STAR] SqlNode: '*'
+    |  \-[SELECT_COLUMNS] SqlNode: ' as col_3_0_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[lr], fromElementByTableAlias=[loggedrequ0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'LoggedRequest loggedrequ0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=lr,role=null,tableName=LoggedRequest,tableAlias=loggedrequ0_,origin=null,colums={,className=com.kkazmierczyk.freestyle.LoggedRequest}}
+    +-[WHERE] SqlNode: 'where'
+    |  \-[LIKE] BinaryLogicOperatorNode: 'like'
+    |     +-[DOT] DotNode: 'loggedrequ0_.agent' {propertyName=agent,dereferenceType=4,propertyPath=agent,path=lr.agent,tableAlias=loggedrequ0_,className=com.kkazmierczyk.freestyle.LoggedRequest,classAlias=lr}
+    |     |  +-[ALIAS_REF] IdentNode: 'loggedrequ0_.id' {alias=lr, className=com.kkazmierczyk.freestyle.LoggedRequest, tableAlias=loggedrequ0_}
+    |     |  \-[IDENT] IdentNode: 'agent' {originalText=agent}
+    |     \-[NAMED_PARAM] ParameterNode: '?' {name=agent, expectedType=org.hibernate.type.StringType@6d999a}
+    +-[GROUP] SqlNode: 'group'
+    |  +-[METHOD_CALL] MethodNode: '('
+    |  |  +-[METHOD_NAME] IdentNode: 'year' {originalText=year}
+    |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+    |  |     \-[DOT] DotNode: 'loggedrequ0_.date' {propertyName=date,dereferenceType=4,propertyPath=date,path={synthetic-alias}.date,tableAlias=loggedrequ0_,className=com.kkazmierczyk.freestyle.LoggedRequest,classAlias=lr}
+    |  |        +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+    |  |        \-[IDENT] IdentNode: 'date' {originalText=date}
+    |  +-[METHOD_CALL] MethodNode: '('
+    |  |  +-[METHOD_NAME] IdentNode: 'month' {originalText=month}
+    |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+    |  |     \-[DOT] DotNode: 'loggedrequ0_.date' {propertyName=date,dereferenceType=4,propertyPath=date,path={synthetic-alias}.date,tableAlias=loggedrequ0_,className=com.kkazmierczyk.freestyle.LoggedRequest,classAlias=lr}
+    |  |        +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+    |  |        \-[IDENT] IdentNode: 'date' {originalText=date}
+    |  \-[METHOD_CALL] MethodNode: '('
+    |     +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+    |     \-[EXPR_LIST] SqlNode: 'exprList'
+    |        \-[DOT] DotNode: 'loggedrequ0_.date' {propertyName=date,dereferenceType=4,propertyPath=date,path={synthetic-alias}.date,tableAlias=loggedrequ0_,className=com.kkazmierczyk.freestyle.LoggedRequest,classAlias=lr}
+    |           +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+    |           \-[IDENT] IdentNode: 'date' {originalText=date}
+    \-[ORDER] OrderByClause: 'order'
+       +-[NUM_INT] LiteralNode: '1'
+       +-[NUM_INT] LiteralNode: '2'
+       \-[NUM_INT] LiteralNode: '3'
+
+00:08:04,934 DEBUG org.hibernate.hql.ast.ErrorCounter - throwQueryException() : no errors
+00:08:04,975 DEBUG org.hibernate.hql.ast.QueryTranslatorImpl - HQL: select year(date), month(date), day(date), count(*) from com.kkazmierczyk.freestyle.LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3
+00:08:04,975 DEBUG org.hibernate.hql.ast.QueryTranslatorImpl - SQL: select year(loggedrequ0_.date) as col_0_0_, month(loggedrequ0_.date) as col_1_0_, day(loggedrequ0_.date) as col_2_0_, count(*) as col_3_0_ from LoggedRequest loggedrequ0_ where loggedrequ0_.agent like ? group by year(loggedrequ0_.date) , month(loggedrequ0_.date) , day(loggedrequ0_.date) order by 1, 2, 3
+00:08:04,975 DEBUG org.hibernate.hql.ast.ErrorCounter - throwQueryException() : no errors
+00:08:05,014 DEBUG org.hibernate.engine.query.HQLQueryPlan - HQL param location recognition took 21 mills (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:05,029 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:05,029 DEBUG org.hibernate.engine.query.HQLQueryPlan - find: select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3
+00:08:05,031 DEBUG org.hibernate.engine.QueryParameters - named parameters: {agent=%Yahoo! Slurp%}
+00:08:05,042 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+00:08:05,042 DEBUG org.hibernate.jdbc.AbstractBatcher - preparing statement
+00:08:05,109 DEBUG org.hibernate.loader.hql.QueryLoader - bindNamedParameters() %Yahoo! Slurp% -> agent [1]
+00:08:05,110 DEBUG org.hibernate.type.StringType - binding '%Yahoo! Slurp%' to parameter: 1
+00:08:05,308 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+00:08:05,310 DEBUG org.hibernate.loader.Loader - processing result set
+00:08:05,310 DEBUG org.hibernate.loader.Loader - result set row: 0
+00:08:05,310 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:05,310 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:05,310 DEBUG org.hibernate.type.IntegerType - returning '5' as column: col_1_0_
+00:08:05,310 DEBUG org.hibernate.type.IntegerType - returning '27' as column: col_2_0_
+00:08:05,311 DEBUG org.hibernate.type.LongType - returning '2' as column: col_3_0_
+00:08:05,311 DEBUG org.hibernate.loader.Loader - result set row: 1
+00:08:05,311 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:05,311 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:05,311 DEBUG org.hibernate.type.IntegerType - returning '5' as column: col_1_0_
+00:08:05,311 DEBUG org.hibernate.type.IntegerType - returning '28' as column: col_2_0_
+00:08:05,311 DEBUG org.hibernate.type.LongType - returning '13' as column: col_3_0_
+00:08:05,311 DEBUG org.hibernate.loader.Loader - result set row: 2
+00:08:05,311 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:05,311 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:05,312 DEBUG org.hibernate.type.IntegerType - returning '5' as column: col_1_0_
+00:08:05,312 DEBUG org.hibernate.type.IntegerType - returning '29' as column: col_2_0_
+00:08:05,312 DEBUG org.hibernate.type.LongType - returning '425' as column: col_3_0_
+00:08:05,312 DEBUG org.hibernate.loader.Loader - result set row: 3
+00:08:05,312 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:05,312 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:05,312 DEBUG org.hibernate.type.IntegerType - returning '5' as column: col_1_0_
+00:08:05,312 DEBUG org.hibernate.type.IntegerType - returning '30' as column: col_2_0_
+00:08:05,312 DEBUG org.hibernate.type.LongType - returning '4' as column: col_3_0_
+00:08:05,312 DEBUG org.hibernate.loader.Loader - result set row: 4
+00:08:05,312 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:05,312 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:05,312 DEBUG org.hibernate.type.IntegerType - returning '6' as column: col_1_0_
+00:08:05,312 DEBUG org.hibernate.type.IntegerType - returning '1' as column: col_2_0_
+00:08:05,312 DEBUG org.hibernate.type.LongType - returning '1' as column: col_3_0_
+00:08:05,312 DEBUG org.hibernate.loader.Loader - result set row: 5
+00:08:05,312 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:05,312 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:05,312 DEBUG org.hibernate.type.IntegerType - returning '6' as column: col_1_0_
+00:08:05,312 DEBUG org.hibernate.type.IntegerType - returning '2' as column: col_2_0_
+00:08:05,312 DEBUG org.hibernate.type.LongType - returning '1' as column: col_3_0_
+00:08:05,312 DEBUG org.hibernate.loader.Loader - result set row: 6
+00:08:05,312 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:05,313 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:05,313 DEBUG org.hibernate.type.IntegerType - returning '6' as column: col_1_0_
+00:08:05,313 DEBUG org.hibernate.type.IntegerType - returning '3' as column: col_2_0_
+00:08:05,313 DEBUG org.hibernate.type.LongType - returning '3' as column: col_3_0_
+00:08:05,313 DEBUG org.hibernate.loader.Loader - done processing result set (7 rows)
+00:08:05,313 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+00:08:05,313 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+00:08:05,313 DEBUG org.hibernate.jdbc.AbstractBatcher - closing statement
+00:08:05,315 DEBUG org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+00:08:05,316 DEBUG org.hibernate.transaction.JDBCTransaction - commit
+00:08:05,316 DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+00:08:05,316 DEBUG org.hibernate.jdbc.JDBCContext - before transaction completion
+00:08:05,316 DEBUG org.hibernate.impl.SessionImpl - before transaction completion
+00:08:05,316 DEBUG org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+00:08:05,316 DEBUG org.hibernate.jdbc.JDBCContext - after transaction completion
+00:08:05,316 DEBUG org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+00:08:05,316 DEBUG org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+00:08:05,316 DEBUG org.hibernate.impl.SessionImpl - after transaction completion
+00:08:05,317 DEBUG org.hibernate.impl.SessionImpl - closing session
+00:08:05,317 DEBUG org.hibernate.jdbc.ConnectionManager - connection already null in cleanup : no action
+00:08:05,317 DEBUG org.hibernate.impl.SessionImpl - opened session at timestamp: 12126172853
+00:08:05,317 DEBUG org.hibernate.transaction.JDBCTransaction - begin
+00:08:05,317 DEBUG org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+00:08:05,317 DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: false
+00:08:05,317 DEBUG org.hibernate.jdbc.JDBCContext - after transaction begin
+00:08:05,317 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:05,318 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:05,318 DEBUG org.hibernate.engine.query.HQLQueryPlan - find: select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3
+00:08:05,318 DEBUG org.hibernate.engine.QueryParameters - named parameters: {agent=%Googlebot%}
+00:08:05,318 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+00:08:05,318 DEBUG org.hibernate.jdbc.AbstractBatcher - preparing statement
+00:08:05,318 DEBUG org.hibernate.loader.hql.QueryLoader - bindNamedParameters() %Googlebot% -> agent [1]
+00:08:05,318 DEBUG org.hibernate.type.StringType - binding '%Googlebot%' to parameter: 1
+00:08:05,331 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+00:08:05,331 DEBUG org.hibernate.loader.Loader - processing result set
+00:08:05,331 DEBUG org.hibernate.loader.Loader - done processing result set (0 rows)
+00:08:05,331 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+00:08:05,331 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+00:08:05,331 DEBUG org.hibernate.jdbc.AbstractBatcher - closing statement
+00:08:05,331 DEBUG org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+00:08:05,331 DEBUG org.hibernate.transaction.JDBCTransaction - commit
+00:08:05,331 DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+00:08:05,331 DEBUG org.hibernate.jdbc.JDBCContext - before transaction completion
+00:08:05,331 DEBUG org.hibernate.impl.SessionImpl - before transaction completion
+00:08:05,331 DEBUG org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+00:08:05,331 DEBUG org.hibernate.jdbc.JDBCContext - after transaction completion
+00:08:05,331 DEBUG org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+00:08:05,331 DEBUG org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+00:08:05,332 DEBUG org.hibernate.impl.SessionImpl - after transaction completion
+00:08:05,332 DEBUG org.hibernate.impl.SessionImpl - closing session
+00:08:05,332 DEBUG org.hibernate.jdbc.ConnectionManager - connection already null in cleanup : no action
+00:08:05,332 DEBUG org.hibernate.impl.SessionImpl - opened session at timestamp: 12126172853
+00:08:05,332 DEBUG org.hibernate.transaction.JDBCTransaction - begin
+00:08:05,332 DEBUG org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+00:08:05,332 DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: false
+00:08:05,332 DEBUG org.hibernate.jdbc.JDBCContext - after transaction begin
+00:08:05,332 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:05,332 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:05,332 DEBUG org.hibernate.engine.query.HQLQueryPlan - find: select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3
+00:08:05,333 DEBUG org.hibernate.engine.QueryParameters - named parameters: {agent=%msnbot%}
+00:08:05,333 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+00:08:05,333 DEBUG org.hibernate.jdbc.AbstractBatcher - preparing statement
+00:08:05,340 DEBUG org.hibernate.loader.hql.QueryLoader - bindNamedParameters() %msnbot% -> agent [1]
+00:08:05,340 DEBUG org.hibernate.type.StringType - binding '%msnbot%' to parameter: 1
+00:08:05,347 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+00:08:05,347 DEBUG org.hibernate.loader.Loader - processing result set
+00:08:05,347 DEBUG org.hibernate.loader.Loader - done processing result set (0 rows)
+00:08:05,347 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+00:08:05,347 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+00:08:05,347 DEBUG org.hibernate.jdbc.AbstractBatcher - closing statement
+00:08:05,347 DEBUG org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+00:08:05,350 DEBUG org.hibernate.transaction.JDBCTransaction - commit
+00:08:05,350 DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+00:08:05,350 DEBUG org.hibernate.jdbc.JDBCContext - before transaction completion
+00:08:05,350 DEBUG org.hibernate.impl.SessionImpl - before transaction completion
+00:08:05,350 DEBUG org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+00:08:05,350 DEBUG org.hibernate.jdbc.JDBCContext - after transaction completion
+00:08:05,350 DEBUG org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+00:08:05,350 DEBUG org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+00:08:05,351 DEBUG org.hibernate.impl.SessionImpl - after transaction completion
+00:08:05,351 DEBUG org.hibernate.impl.SessionImpl - closing session
+00:08:05,351 DEBUG org.hibernate.jdbc.ConnectionManager - connection already null in cleanup : no action
+00:08:06,705 DEBUG org.hibernate.impl.SessionImpl - opened session at timestamp: 12126172867
+00:08:06,705 DEBUG org.hibernate.transaction.JDBCTransaction - begin
+00:08:06,705 DEBUG org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+00:08:06,706 DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: false
+00:08:06,706 DEBUG org.hibernate.jdbc.JDBCContext - after transaction begin
+00:08:06,706 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:06,706 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:06,706 DEBUG org.hibernate.engine.query.HQLQueryPlan - find: select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3
+00:08:06,706 DEBUG org.hibernate.engine.QueryParameters - named parameters: {agent=%Yahoo! Slurp%}
+00:08:06,706 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+00:08:06,706 DEBUG org.hibernate.jdbc.AbstractBatcher - preparing statement
+00:08:06,707 DEBUG org.hibernate.loader.hql.QueryLoader - bindNamedParameters() %Yahoo! Slurp% -> agent [1]
+00:08:06,707 DEBUG org.hibernate.type.StringType - binding '%Yahoo! Slurp%' to parameter: 1
+00:08:06,772 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+00:08:06,772 DEBUG org.hibernate.loader.Loader - processing result set
+00:08:06,772 DEBUG org.hibernate.loader.Loader - result set row: 0
+00:08:06,772 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:06,773 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:06,773 DEBUG org.hibernate.type.IntegerType - returning '5' as column: col_1_0_
+00:08:06,773 DEBUG org.hibernate.type.IntegerType - returning '27' as column: col_2_0_
+00:08:06,773 DEBUG org.hibernate.type.LongType - returning '2' as column: col_3_0_
+00:08:06,773 DEBUG org.hibernate.loader.Loader - result set row: 1
+00:08:06,773 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:06,773 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:06,773 DEBUG org.hibernate.type.IntegerType - returning '5' as column: col_1_0_
+00:08:06,773 DEBUG org.hibernate.type.IntegerType - returning '28' as column: col_2_0_
+00:08:06,773 DEBUG org.hibernate.type.LongType - returning '13' as column: col_3_0_
+00:08:06,773 DEBUG org.hibernate.loader.Loader - result set row: 2
+00:08:06,773 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:06,773 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:06,774 DEBUG org.hibernate.type.IntegerType - returning '5' as column: col_1_0_
+00:08:06,774 DEBUG org.hibernate.type.IntegerType - returning '29' as column: col_2_0_
+00:08:06,774 DEBUG org.hibernate.type.LongType - returning '425' as column: col_3_0_
+00:08:06,774 DEBUG org.hibernate.loader.Loader - result set row: 3
+00:08:06,774 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:06,774 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:06,774 DEBUG org.hibernate.type.IntegerType - returning '5' as column: col_1_0_
+00:08:06,774 DEBUG org.hibernate.type.IntegerType - returning '30' as column: col_2_0_
+00:08:06,774 DEBUG org.hibernate.type.LongType - returning '4' as column: col_3_0_
+00:08:06,775 DEBUG org.hibernate.loader.Loader - result set row: 4
+00:08:06,775 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:06,775 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:06,775 DEBUG org.hibernate.type.IntegerType - returning '6' as column: col_1_0_
+00:08:06,775 DEBUG org.hibernate.type.IntegerType - returning '1' as column: col_2_0_
+00:08:06,775 DEBUG org.hibernate.type.LongType - returning '1' as column: col_3_0_
+00:08:06,775 DEBUG org.hibernate.loader.Loader - result set row: 5
+00:08:06,775 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:06,775 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:06,775 DEBUG org.hibernate.type.IntegerType - returning '6' as column: col_1_0_
+00:08:06,776 DEBUG org.hibernate.type.IntegerType - returning '2' as column: col_2_0_
+00:08:06,776 DEBUG org.hibernate.type.LongType - returning '1' as column: col_3_0_
+00:08:06,776 DEBUG org.hibernate.loader.Loader - result set row: 6
+00:08:06,776 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:06,776 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:06,776 DEBUG org.hibernate.type.IntegerType - returning '6' as column: col_1_0_
+00:08:06,776 DEBUG org.hibernate.type.IntegerType - returning '3' as column: col_2_0_
+00:08:06,776 DEBUG org.hibernate.type.LongType - returning '3' as column: col_3_0_
+00:08:06,776 DEBUG org.hibernate.loader.Loader - done processing result set (7 rows)
+00:08:06,776 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+00:08:06,776 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+00:08:06,776 DEBUG org.hibernate.jdbc.AbstractBatcher - closing statement
+00:08:06,776 DEBUG org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+00:08:06,776 DEBUG org.hibernate.transaction.JDBCTransaction - commit
+00:08:06,776 DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+00:08:06,776 DEBUG org.hibernate.jdbc.JDBCContext - before transaction completion
+00:08:06,776 DEBUG org.hibernate.impl.SessionImpl - before transaction completion
+00:08:06,776 DEBUG org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+00:08:06,776 DEBUG org.hibernate.jdbc.JDBCContext - after transaction completion
+00:08:06,776 DEBUG org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+00:08:06,776 DEBUG org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+00:08:06,777 DEBUG org.hibernate.impl.SessionImpl - after transaction completion
+00:08:06,777 DEBUG org.hibernate.impl.SessionImpl - closing session
+00:08:06,777 DEBUG org.hibernate.jdbc.ConnectionManager - connection already null in cleanup : no action
+00:08:06,777 DEBUG org.hibernate.impl.SessionImpl - opened session at timestamp: 12126172867
+00:08:06,777 DEBUG org.hibernate.transaction.JDBCTransaction - begin
+00:08:06,777 DEBUG org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+00:08:06,777 DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: false
+00:08:06,777 DEBUG org.hibernate.jdbc.JDBCContext - after transaction begin
+00:08:06,777 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:06,777 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:06,777 DEBUG org.hibernate.engine.query.HQLQueryPlan - find: select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3
+00:08:06,777 DEBUG org.hibernate.engine.QueryParameters - named parameters: {agent=%Googlebot%}
+00:08:06,777 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+00:08:06,777 DEBUG org.hibernate.jdbc.AbstractBatcher - preparing statement
+00:08:06,778 DEBUG org.hibernate.loader.hql.QueryLoader - bindNamedParameters() %Googlebot% -> agent [1]
+00:08:06,778 DEBUG org.hibernate.type.StringType - binding '%Googlebot%' to parameter: 1
+00:08:06,779 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+00:08:06,779 DEBUG org.hibernate.loader.Loader - processing result set
+00:08:06,779 DEBUG org.hibernate.loader.Loader - done processing result set (0 rows)
+00:08:06,779 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+00:08:06,779 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+00:08:06,779 DEBUG org.hibernate.jdbc.AbstractBatcher - closing statement
+00:08:06,780 DEBUG org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+00:08:06,780 DEBUG org.hibernate.transaction.JDBCTransaction - commit
+00:08:06,780 DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+00:08:06,780 DEBUG org.hibernate.jdbc.JDBCContext - before transaction completion
+00:08:06,780 DEBUG org.hibernate.impl.SessionImpl - before transaction completion
+00:08:06,780 DEBUG org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+00:08:06,780 DEBUG org.hibernate.jdbc.JDBCContext - after transaction completion
+00:08:06,780 DEBUG org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+00:08:06,780 DEBUG org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+00:08:06,780 DEBUG org.hibernate.impl.SessionImpl - after transaction completion
+00:08:06,780 DEBUG org.hibernate.impl.SessionImpl - closing session
+00:08:06,780 DEBUG org.hibernate.jdbc.ConnectionManager - connection already null in cleanup : no action
+00:08:06,780 DEBUG org.hibernate.impl.SessionImpl - opened session at timestamp: 12126172867
+00:08:06,780 DEBUG org.hibernate.transaction.JDBCTransaction - begin
+00:08:06,780 DEBUG org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+00:08:06,780 DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: false
+00:08:06,780 DEBUG org.hibernate.jdbc.JDBCContext - after transaction begin
+00:08:06,780 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:06,781 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:06,781 DEBUG org.hibernate.engine.query.HQLQueryPlan - find: select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3
+00:08:06,781 DEBUG org.hibernate.engine.QueryParameters - named parameters: {agent=%msnbot%}
+00:08:06,781 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+00:08:06,781 DEBUG org.hibernate.jdbc.AbstractBatcher - preparing statement
+00:08:06,781 DEBUG org.hibernate.loader.hql.QueryLoader - bindNamedParameters() %msnbot% -> agent [1]
+00:08:06,781 DEBUG org.hibernate.type.StringType - binding '%msnbot%' to parameter: 1
+00:08:06,782 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+00:08:06,782 DEBUG org.hibernate.loader.Loader - processing result set
+00:08:06,782 DEBUG org.hibernate.loader.Loader - done processing result set (0 rows)
+00:08:06,782 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+00:08:06,782 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+00:08:06,782 DEBUG org.hibernate.jdbc.AbstractBatcher - closing statement
+00:08:06,782 DEBUG org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+00:08:06,782 DEBUG org.hibernate.transaction.JDBCTransaction - commit
+00:08:06,783 DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+00:08:06,783 DEBUG org.hibernate.jdbc.JDBCContext - before transaction completion
+00:08:06,783 DEBUG org.hibernate.impl.SessionImpl - before transaction completion
+00:08:06,783 DEBUG org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+00:08:06,783 DEBUG org.hibernate.jdbc.JDBCContext - after transaction completion
+00:08:06,783 DEBUG org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+00:08:06,783 DEBUG org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+00:08:06,783 DEBUG org.hibernate.impl.SessionImpl - after transaction completion
+00:08:06,783 DEBUG org.hibernate.impl.SessionImpl - closing session
+00:08:06,783 DEBUG org.hibernate.jdbc.ConnectionManager - connection already null in cleanup : no action
+00:08:08,675 DEBUG org.hibernate.impl.SessionImpl - opened session at timestamp: 12126172886
+00:08:08,675 DEBUG org.hibernate.transaction.JDBCTransaction - begin
+00:08:08,675 DEBUG org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+00:08:08,675 DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: false
+00:08:08,675 DEBUG org.hibernate.jdbc.JDBCContext - after transaction begin
+00:08:08,675 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:08,675 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:08,675 DEBUG org.hibernate.engine.query.HQLQueryPlan - find: select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3
+00:08:08,675 DEBUG org.hibernate.engine.QueryParameters - named parameters: {agent=%Yahoo! Slurp%}
+00:08:08,675 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+00:08:08,675 DEBUG org.hibernate.jdbc.AbstractBatcher - preparing statement
+00:08:08,676 DEBUG org.hibernate.loader.hql.QueryLoader - bindNamedParameters() %Yahoo! Slurp% -> agent [1]
+00:08:08,676 DEBUG org.hibernate.type.StringType - binding '%Yahoo! Slurp%' to parameter: 1
+00:08:08,733 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+00:08:08,733 DEBUG org.hibernate.loader.Loader - processing result set
+00:08:08,733 DEBUG org.hibernate.loader.Loader - result set row: 0
+00:08:08,733 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:08,768 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:08,769 DEBUG org.hibernate.type.IntegerType - returning '5' as column: col_1_0_
+00:08:08,769 DEBUG org.hibernate.type.IntegerType - returning '27' as column: col_2_0_
+00:08:08,769 DEBUG org.hibernate.type.LongType - returning '2' as column: col_3_0_
+00:08:08,769 DEBUG org.hibernate.loader.Loader - result set row: 1
+00:08:08,769 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:08,769 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:08,769 DEBUG org.hibernate.type.IntegerType - returning '5' as column: col_1_0_
+00:08:08,769 DEBUG org.hibernate.type.IntegerType - returning '28' as column: col_2_0_
+00:08:08,769 DEBUG org.hibernate.type.LongType - returning '13' as column: col_3_0_
+00:08:08,769 DEBUG org.hibernate.loader.Loader - result set row: 2
+00:08:08,769 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:08,770 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:08,771 DEBUG org.hibernate.type.IntegerType - returning '5' as column: col_1_0_
+00:08:08,771 DEBUG org.hibernate.type.IntegerType - returning '29' as column: col_2_0_
+00:08:08,771 DEBUG org.hibernate.type.LongType - returning '425' as column: col_3_0_
+00:08:08,771 DEBUG org.hibernate.loader.Loader - result set row: 3
+00:08:08,771 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:08,771 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:08,771 DEBUG org.hibernate.type.IntegerType - returning '5' as column: col_1_0_
+00:08:08,771 DEBUG org.hibernate.type.IntegerType - returning '30' as column: col_2_0_
+00:08:08,772 DEBUG org.hibernate.type.LongType - returning '4' as column: col_3_0_
+00:08:08,772 DEBUG org.hibernate.loader.Loader - result set row: 4
+00:08:08,772 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:08,772 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:08,772 DEBUG org.hibernate.type.IntegerType - returning '6' as column: col_1_0_
+00:08:08,772 DEBUG org.hibernate.type.IntegerType - returning '1' as column: col_2_0_
+00:08:08,773 DEBUG org.hibernate.type.LongType - returning '1' as column: col_3_0_
+00:08:08,773 DEBUG org.hibernate.loader.Loader - result set row: 5
+00:08:08,773 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:08,773 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:08,773 DEBUG org.hibernate.type.IntegerType - returning '6' as column: col_1_0_
+00:08:08,773 DEBUG org.hibernate.type.IntegerType - returning '2' as column: col_2_0_
+00:08:08,773 DEBUG org.hibernate.type.LongType - returning '1' as column: col_3_0_
+00:08:08,773 DEBUG org.hibernate.loader.Loader - result set row: 6
+00:08:08,774 DEBUG org.hibernate.loader.Loader - result row: 
+00:08:08,774 DEBUG org.hibernate.type.IntegerType - returning '2008' as column: col_0_0_
+00:08:08,774 DEBUG org.hibernate.type.IntegerType - returning '6' as column: col_1_0_
+00:08:08,774 DEBUG org.hibernate.type.IntegerType - returning '3' as column: col_2_0_
+00:08:08,774 DEBUG org.hibernate.type.LongType - returning '3' as column: col_3_0_
+00:08:08,774 DEBUG org.hibernate.loader.Loader - done processing result set (7 rows)
+00:08:08,774 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+00:08:08,774 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+00:08:08,774 DEBUG org.hibernate.jdbc.AbstractBatcher - closing statement
+00:08:08,774 DEBUG org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+00:08:08,775 DEBUG org.hibernate.transaction.JDBCTransaction - commit
+00:08:08,775 DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+00:08:08,775 DEBUG org.hibernate.jdbc.JDBCContext - before transaction completion
+00:08:08,775 DEBUG org.hibernate.impl.SessionImpl - before transaction completion
+00:08:08,775 DEBUG org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+00:08:08,775 DEBUG org.hibernate.jdbc.JDBCContext - after transaction completion
+00:08:08,775 DEBUG org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+00:08:08,775 DEBUG org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+00:08:08,776 DEBUG org.hibernate.impl.SessionImpl - after transaction completion
+00:08:08,776 DEBUG org.hibernate.impl.SessionImpl - closing session
+00:08:08,776 DEBUG org.hibernate.jdbc.ConnectionManager - connection already null in cleanup : no action
+00:08:08,776 DEBUG org.hibernate.impl.SessionImpl - opened session at timestamp: 12126172887
+00:08:08,776 DEBUG org.hibernate.transaction.JDBCTransaction - begin
+00:08:08,776 DEBUG org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+00:08:08,776 DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: false
+00:08:08,776 DEBUG org.hibernate.jdbc.JDBCContext - after transaction begin
+00:08:08,777 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:08,777 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:08,777 DEBUG org.hibernate.engine.query.HQLQueryPlan - find: select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3
+00:08:08,777 DEBUG org.hibernate.engine.QueryParameters - named parameters: {agent=%Googlebot%}
+00:08:08,777 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+00:08:08,777 DEBUG org.hibernate.jdbc.AbstractBatcher - preparing statement
+00:08:08,777 DEBUG org.hibernate.loader.hql.QueryLoader - bindNamedParameters() %Googlebot% -> agent [1]
+00:08:08,777 DEBUG org.hibernate.type.StringType - binding '%Googlebot%' to parameter: 1
+00:08:08,778 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+00:08:08,787 DEBUG org.hibernate.loader.Loader - processing result set
+00:08:08,787 DEBUG org.hibernate.loader.Loader - done processing result set (0 rows)
+00:08:08,787 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+00:08:08,787 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+00:08:08,787 DEBUG org.hibernate.jdbc.AbstractBatcher - closing statement
+00:08:08,788 DEBUG org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+00:08:08,788 DEBUG org.hibernate.transaction.JDBCTransaction - commit
+00:08:08,788 DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+00:08:08,788 DEBUG org.hibernate.jdbc.JDBCContext - before transaction completion
+00:08:08,788 DEBUG org.hibernate.impl.SessionImpl - before transaction completion
+00:08:08,788 DEBUG org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+00:08:08,788 DEBUG org.hibernate.jdbc.JDBCContext - after transaction completion
+00:08:08,788 DEBUG org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+00:08:08,788 DEBUG org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+00:08:08,788 DEBUG org.hibernate.impl.SessionImpl - after transaction completion
+00:08:08,788 DEBUG org.hibernate.impl.SessionImpl - closing session
+00:08:08,788 DEBUG org.hibernate.jdbc.ConnectionManager - connection already null in cleanup : no action
+00:08:08,789 DEBUG org.hibernate.impl.SessionImpl - opened session at timestamp: 12126172887
+00:08:08,789 DEBUG org.hibernate.transaction.JDBCTransaction - begin
+00:08:08,789 DEBUG org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+00:08:08,789 DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: false
+00:08:08,789 DEBUG org.hibernate.jdbc.JDBCContext - after transaction begin
+00:08:08,789 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:08,789 DEBUG org.hibernate.engine.query.QueryPlanCache - located HQL query plan in cache (select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3)
+00:08:08,790 DEBUG org.hibernate.engine.query.HQLQueryPlan - find: select year(date), month(date), day(date), count(*) from LoggedRequest lr where lr.agent like :agent group by year(date), month(date), day(date) order by 1, 2, 3
+00:08:08,790 DEBUG org.hibernate.engine.QueryParameters - named parameters: {agent=%msnbot%}
+00:08:08,790 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+00:08:08,790 DEBUG org.hibernate.jdbc.AbstractBatcher - preparing statement
+00:08:08,790 DEBUG org.hibernate.loader.hql.QueryLoader - bindNamedParameters() %msnbot% -> agent [1]
+00:08:08,790 DEBUG org.hibernate.type.StringType - binding '%msnbot%' to parameter: 1
+00:08:08,791 DEBUG org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+00:08:08,791 DEBUG org.hibernate.loader.Loader - processing result set
+00:08:08,791 DEBUG org.hibernate.loader.Loader - done processing result set (0 rows)
+00:08:08,791 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+00:08:08,791 DEBUG org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+00:08:08,792 DEBUG org.hibernate.jdbc.AbstractBatcher - closing statement
+00:08:08,792 DEBUG org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+00:08:08,792 DEBUG org.hibernate.transaction.JDBCTransaction - commit
+00:08:08,792 DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+00:08:08,792 DEBUG org.hibernate.jdbc.JDBCContext - before transaction completion
+00:08:08,792 DEBUG org.hibernate.impl.SessionImpl - before transaction completion
+00:08:08,792 DEBUG org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+00:08:08,792 DEBUG org.hibernate.jdbc.JDBCContext - after transaction completion
+00:08:08,792 DEBUG org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+00:08:08,792 DEBUG org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+00:08:08,792 DEBUG org.hibernate.impl.SessionImpl - after transaction completion
+00:08:08,792 DEBUG org.hibernate.impl.SessionImpl - closing session
+00:08:08,802 DEBUG org.hibernate.jdbc.ConnectionManager - connection already null in cleanup : no action
+00:13:49,277  WARN com.mchange.v2.async.ThreadPoolAsynchronousRunner - com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@1d8f162 -- APPARENT DEADLOCK!!! Creating emergency threads for unassigned pending tasks!
+00:13:49,278  WARN com.mchange.v2.async.ThreadPoolAsynchronousRunner - com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@1d8f162 -- APPARENT DEADLOCK!!! Complete Status: [num_managed_threads: 3, num_active: 3; activeTasks: com.mchange.v2.resourcepool.BasicResourcePool$5@13dd208 (com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2), com.mchange.v2.resourcepool.BasicResourcePool$5@1a8402c (com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1), com.mchange.v2.resourcepool.BasicResourcePool$5@10d0eae (com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0); pendingTasks: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3eec1a, com.mchange.v2.c3p0.stmt.GooGooStatementCache$2@fedfb6, com.mchange.v2.c3p0.stmt.GooGooStatementCache$2@1115152, com.mchange.v2.c3p0.stmt.GooGooStatementCache$2@1f1f38e]
+00:28:04,907  INFO org.hibernate.impl.SessionFactoryImpl - closing
+00:28:04,910  INFO com.kkazmierczyk.freestyle.MainServlet - Servlet destroyed.

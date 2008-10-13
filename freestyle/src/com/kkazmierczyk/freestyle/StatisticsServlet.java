@@ -1,0 +1,213 @@
+package com.kkazmierczyk.freestyle;
+
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.EntityManagerFactory;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * 
+ * This servlet displays overall statistics refered to whole tree
+ * 
+ * @version $Id: StatisticsServlet.java 37 2008-06-03 20:31:47Z kazik $
+ */
+public class StatisticsServlet extends HttpServlet {
+
+	private static final String MOST_VISITED_NODES = "Most visited nodes";
+
+	/** Number of results displayed in statistics of most visited nodes */
+	private static final int VISITED_NODES_DISPLAY_NO = 10;
+
+	private static final String OVERALL_NODES = "Number of all nodes visited on each level";
+
+	private static final String DEEPEST_VISITED_NODES = "Deepest visited nodes";
+
+	private static final String TITLE = "Statistics";
+
+	private Bots bots = null;
+	private EntityManagerFactory emf = null;
+
+	/**
+	 * 
+	 * Displays html table with input data witch overall statistics
+	 * 
+	 * @param writer
+	 *            Writer to which display data
+	 * @param dataToDisplayByLevel
+	 * @throws IOException
+	 */
+	private void displaylevelStatsDataTable(final Writer writer,
+			int[][] dataToDisplayByLevel) throws IOException {
+		writer.write("<table>");
+		writer.write("<tr><th>level</th>");
+		for (Bot bot : bots.getBots()) {
+			writer.write("<th>" + bot.getName() + "</th>");
+		}
+		writer.write("</tr>");
+
+		for (int i = 0; i < dataToDisplayByLevel[0].length; i++) {
+			writer.write("<tr>");
+			writer.write("<td>" + i + "</td>");
+			for (int j = 0; j < dataToDisplayByLevel.length; j++) {
+				writer.write("<td>" + dataToDisplayByLevel[j][i] + "</td>");
+			}
+			writer.write("</tr>");
+		}
+
+		writer.write("</table>");
+	}
+
+	private void displayMostVisitedNodes(Writer writer, int displayResultsNO)
+			throws IOException {
+
+		writer.write("<h2>" + MOST_VISITED_NODES + "</h2>");
+
+		writer.write("<table><tr>");
+
+		for (Bot bot : bots.getBots()) {
+			writer.write("<th>" + bot.getName() + "</th>");
+		}
+
+		writer.write("</tr><tr>");
+
+		for (Bot bot : bots.getBots()) {
+			writer.write("<td>"
+					+ displayStatsTableOfOneAgent(DataManager
+							.getMostVisitedNodes(emf, bot.getAgent(),
+									displayResultsNO)) + "</td>");
+		}
+
+		writer.write("</tr></table>");
+	}
+
+	private String displayStatsTableOfOneAgent(List<Object[]> mostVisitedNodes) {
+
+		StringBuilder result = new StringBuilder("<table>");
+
+		for (Object[] objects : mostVisitedNodes) {
+			result.append("<tr><td><a href=\" ").append(objects[0]).append(
+					" \"> ").append(objects[0]).append(" </a></td><td>")
+					.append(objects[1]).append("</td></tr>");
+		}
+
+		// to pass w3c test validation
+		if (mostVisitedNodes.size() == 0) {
+			result.append("<tr><td></td></tr>");
+		}
+
+		result.append("</table>");
+
+		return result.toString();
+	}
+
+	/**
+	 * Retrieves and displays statistics of number of visited nodes by level in
+	 * the tree
+	 * 
+	 * @param writer
+	 *            Output to which write results
+	 * @throws IOException
+	 */
+	private void displayStatsNodesByLevel(final Writer writer)
+			throws IOException {
+		writer.write("<h2>" + OVERALL_NODES + "</h2>");
+
+		// preparing data to effective display
+
+		List<List<Object[]>> allBotsresult = new ArrayList<List<Object[]>>();
+
+		for (Bot bot : bots.getBots()) {
+			allBotsresult.add(DataManager.getNodeNumberVisitedByLevel(emf, bot
+					.getAgent()));
+		}
+
+		int[][] dataToDisplayByLevel = prepareToDisplayByLevel(allBotsresult);
+
+		displaylevelStatsDataTable(writer, dataToDisplayByLevel);
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		final Writer writer = new OutputStreamWriter(resp.getOutputStream(),
+				"utf-8");
+
+		writer.write(MainServlet.DOCTYPE + "<html><head>"
+				+ "<meta http-equiv=\"content-type\" content=\"utf-8\">"
+				+ "<title>" + TITLE + "</title>"
+				+ "<meta name=\"robots\" content=\"none\"></head><body>");
+
+		displayStatsNodesByLevel(writer);
+		writer.write("<p>");
+		displayMostVisitedNodes(writer, VISITED_NODES_DISPLAY_NO);
+		writer.write("<p>");
+		displayDeepestVisitedNodes(writer, VISITED_NODES_DISPLAY_NO);
+
+		writer.write("</body></html>");
+		writer.close();
+
+	}
+
+	private void displayDeepestVisitedNodes(Writer writer,
+			int visitedNodesDisplayNo) throws IOException {
+		writer.write("<h2>" + DEEPEST_VISITED_NODES + "</h2>");
+
+		writer.write("<table><tr>");
+
+		for (Bot bot : bots.getBots()) {
+			writer.write("<th>" + bot.getName() + "</th>");
+		}
+
+		writer.write("</tr><tr>");
+
+		for (Bot bot : bots.getBots()) {
+			writer.write("<td>"
+					+ displayStatsTableOfOneAgent(DataManager
+							.getDeepstVisitedNodes(emf, bot.getAgent(),
+									visitedNodesDisplayNo)) + "</td>");
+		}
+
+		writer.write("</tr></table>");
+	}
+
+	@Override
+	public void init() throws ServletException {
+		super.init();
+		emf = (EntityManagerFactory) getServletContext().getAttribute("emf");
+		bots = (Bots) getServletContext().getAttribute("bots");
+	}
+
+	private int[][] prepareToDisplayByLevel(List<List<Object[]>> allBotsresult) {
+		long maxDepth = 0; // Maximal depth of search by bot
+		for (List<Object[]> list : allBotsresult) {
+			if (list.size() > 0) {
+				long currentDepth = (Long) ((Object[]) list
+						.get(list.size() - 1))[0];
+				maxDepth = Math.max(maxDepth, currentDepth);
+			}
+		}
+
+		int[][] result = new int[allBotsresult.size()][];
+
+		for (int i = 0; i < result.length; i++) {
+			result[i] = new int[(int) (maxDepth + 1)];// We have also level
+			// "0" (empty string)
+			List<Object[]> currentBot = allBotsresult.get(i);
+
+			for (int j = 0; j < currentBot.size(); j++) {
+				long pos = (Long) (((Object[]) currentBot.get(j))[0]);
+				long value = (Long) (((Object[]) currentBot.get(j))[1]);
+				result[i][(int) pos] = (int) value;
+			}
+		}
+
+		return result;
+	}
+}

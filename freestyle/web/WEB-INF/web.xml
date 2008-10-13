@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Licensed to the Apache Software Foundation (ASF) under one or more
+	contributor license agreements.  See the NOTICE file distributed with
+	this work for additional information regarding copyright ownership.
+	The ASF licenses this file to You under the Apache License, Version 2.0
+	(the "License"); you may not use this file except in compliance with
+	the License.  You may obtain a copy of the License at
+	
+	http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+
+<!DOCTYPE web-app PUBLIC
+	"-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+	"http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+  <context-param>
+      <description>number of links on each level</description>
+      <param-name>linksNO</param-name>
+      <param-value>3</param-value>
+  </context-param>
+  
+	<servlet>
+		<servlet-name>mainServlet</servlet-name>
+		<servlet-class>com.kkazmierczyk.freestyle.MainServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>browseDataServlet</servlet-name>
+		<servlet-class>com.kkazmierczyk.freestyle.BrowseDataServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>statisticsServlet</servlet-name>
+		<servlet-class>com.kkazmierczyk.freestyle.StatisticsServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>reportsServlet</servlet-name>
+		<servlet-class>com.kkazmierczyk.freestyle.ReportsServlet</servlet-class>
+	</servlet>
+	
+	<!-- Standard Action Servlet Mapping -->
+	
+		<servlet-mapping>
+		<servlet-name>reportsServlet</servlet-name>
+		<url-pattern>/reports</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>browseDataServlet</servlet-name>
+		<url-pattern>/browse</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>statisticsServlet</servlet-name>
+		<url-pattern>/stats</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>mainServlet</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+	
+
+</web-app>

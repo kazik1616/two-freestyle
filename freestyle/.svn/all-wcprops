@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/freestyle/!svn/ver/1/trunk/freestyle
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/freestyle/!svn/ver/2/trunk/freestyle/.classpath
+END
+server_logger.properties
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/freestyle/!svn/ver/36/trunk/freestyle/server_logger.properties
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/freestyle/!svn/ver/2/trunk/freestyle/.project
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/freestyle/!svn/ver/2/trunk/freestyle/build.xml
+END
+server_logger.script
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/freestyle/!svn/ver/36/trunk/freestyle/server_logger.script
+END
+.checkstyle
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/freestyle/!svn/ver/2/trunk/freestyle/.checkstyle
+END

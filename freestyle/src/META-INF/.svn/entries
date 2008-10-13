@@ -1,0 +1,41 @@
+8
+
+dir
+2
+http://localhost/svn/freestyle/trunk/freestyle/src/META-INF
+http://localhost/svn/freestyle
+
+
+
+2008-05-27T17:13:23.546076Z
+2
+kazik
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ea441bf6-ee29-4fc5-b8ac-ab1510718a52
+
+persistence.xml
+file
+38
+
+
+
+2008-06-04T06:57:23.000000Z
+8e2324c8b5b6d43fe3d0978b5f949523
+2008-06-04T07:05:13.504312Z
+38
+kazik
+has-props
+

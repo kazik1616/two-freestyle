@@ -1,0 +1,321 @@
+package com.kkazmierczyk.freestyle;
+
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.Logger;
+
+/**
+ * 
+ * This servlet logs any visit on the page and saves to database if visit is
+ * caused by bot
+ * 
+ * @version $Id$
+ * 
+ */
+public class MainServlet extends HttpServlet {
+
+	/** Comment to have bots.xt.pl page */
+	private static final String COMMENT_TO_ALIAS = "<!-- "
+			+ "XT:gBTFwZEpwhPakNe27iaiTh6X6R0iLspczqsEohuZZeqwadcCYVL2WXoWbfurtHu4 "
+			+ "-->";
+
+	/** Counts number of visits on web site */
+	private static Long counter = 0L;
+
+	public static final String DOCTYPE = "<!DOCTYPE html PUBLIC "
+			+ "\"-//W3C//DTD HTML 4.01 Transitional//EN\" "
+			+ "\"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd\">";
+
+	/** Code to add this page to google analitics */
+	private static final String GOOGLE_FOLLOW_CODE = "<script type=\"text/javascript\">"
+			+ "var gaJsHost = ((\"https:\" == document.location.protocol) ? "
+			+ "\"https://ssl.\" : \"http://www.\");"
+			+ "document.write(unescape(\"%3Cscript src='\" + gaJsHost + "
+			+ "\"google-analytics.com/ga.js' "
+			+ "type='text/javascript'%3E%3C/script%3E\"));"
+			+ "</script>"
+			+ "<script type=\"text/javascript\">"
+			+ "var pageTracker = _gat._getTracker(\"UA-4545823-1\");"
+			+ "pageTracker._initData();"
+			+ "pageTracker._trackPageview();"
+			+ "</script>";
+
+	/**
+	 * Number of links on each page. Retrieved from application context context
+	 */
+	private static int LINKS_NO;
+
+	/** Logger instance. */
+	private final static Logger logger = Logger.getLogger(MainServlet.class);
+
+	/** Number of visits of each page */
+	private static Map<String, Integer> pagesVisits = new HashMap<String, Integer>();
+
+	/** Used in jpa. */
+	private static final String PERSISTENT_UNIT_NAME = 
+			"com.kkazmierczyk.freestyle";
+
+	/** One level up in the tree. */
+	private static final String UP = "up";
+
+	/** Increases value of counter and returns its new value */
+	private static Long increaseCounter() {
+		synchronized (counter) {
+			return ++counter;
+		}
+	}
+
+	private final Random random = new Random();
+	
+	private static final int MAX_RANDOM_TEXT_LENGTH = 127;
+	
+	private static final String charset = "1AaBb2CcDdEe3FfGgHh4IiJjKk5LlMmNn6OoPp7QqRr8SsTt9UuVvWw0XxYyZz      "; 
+	
+	/** Returns random squence of chars */
+	private String getRandomText() {
+		//I do not need to synchronize 
+		
+
+		int length = Math.abs(random.nextInt() % MAX_RANDOM_TEXT_LENGTH);
+		char[] result = new char[length];
+		for (int i = 0; i < result.length; i++) {
+			short pos = (short) Math.abs(random.nextInt() % charset.length());
+			result[i] = charset.charAt(pos);
+		}
+		return new String(result);
+	}
+	
+	/** Increase number of visits of each page and returns this number */
+	private static int increaseVisit(String path) {
+		synchronized (pagesVisits) {
+			Integer visitsNO = pagesVisits.get(path);
+			if (visitsNO == null) {
+				visitsNO = 0;
+			}
+			pagesVisits.put(path, ++visitsNO);
+			return visitsNO;
+		}
+	}
+
+	/** List of bots */
+	private Bots bots;
+
+	private EntityManagerFactory emf;
+
+	private void countBot(Map<String, Integer> numberOfVisits, String botName) {
+		
+		Integer temp = numberOfVisits.get(botName);
+		
+		if (temp == null) {
+			numberOfVisits.put(botName, 1);
+		} else {
+			numberOfVisits.put(botName, ++temp);
+		}
+	}
+
+	/**
+	 * Perform servlet shutdown.
+	 */
+	@Override
+	public void destroy() {
+		emf.close();
+		logger.info("Servlet destroyed.");
+		super.destroy();
+	}
+
+	/**
+	 * Serves HTTP GET request.
+	 */
+	@Override
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		String path = request.getPathInfo().substring(1); // without trailing
+		// "/"
+
+		String context = request.getContextPath();
+
+		if (validPath(path)) {
+
+			String agent = request.getHeader("User-Agent");
+			logger.info("Path: " + path + " visited by " + agent);
+
+			if (bots.getBotName(agent) != null) {
+				DataManager.saveVisitInDatabase(emf, agent, path);
+			}
+
+			response.setHeader("Content-type", "text/html; charset=utf-8");
+
+			char linkName = 'a';
+
+			final Writer writer = new OutputStreamWriter(response
+					.getOutputStream(), "utf-8");
+
+			writer.write(DOCTYPE + "<html>" + COMMENT_TO_ALIAS + "<head>"
+					+ "<meta http-equiv=\"content-type\" content=\"utf-8\">"
+					+ "<meta name=\"robots\" content=\"all\">" + "<title>"
+					+ path + "</title>" + "</head><body>");
+
+			writer.write("<h1> Welcome on follow spy bot web page </h1>");
+
+			writer.write("<p>This server has been visited " + increaseCounter()
+					+ " times</p>");
+
+			writer.write("<p>This site has been visited " + increaseVisit(path)
+					+ " times</p>");
+
+			writer
+					.write("<p>Current date: " + (new Date()).toString()
+							+ "</p>");
+			
+			writer.write("<p>Site name context: " + path + "</p>");
+			
+			writer.write("<p>Random sequence of text: " + getRandomText() + "</p>");
+
+			// Writing links
+			writer.write("<h2>Links:</h2>");
+			for (int i = 0; i < LINKS_NO; i++) {
+				writer.write("<a href=\"" + context + "/" + path + linkName
+						+ "\">" + linkName + "</a> ");
+				linkName++;
+			}
+
+			// Writing log
+			writeLog(DataManager.getPageLog(emf, path), writer);
+
+			writer.write("<p>");
+
+			if (path.length() > 0) {
+				// writing up page
+				writer.write("<a href=\"" + context + "/"
+						+ path.substring(0, path.length() - 1) + "\">" + UP
+						+ "</a><br>");
+			} else {
+				// writing links to make easier to find this pages by bots
+				writer
+						.write("<h2> Other interesting sites: </h2>"
+								+ "<a href=\"http://www.google.com\">Google web page</a><br>"
+								+ "<a href=\"http://www.yahoo.com\">Yahoo web page</a><br>"
+								+ "<a href=\"http://www.msn.com\">MSN web page</a><br>");
+			}
+
+			writer.write(GOOGLE_FOLLOW_CODE + "</body></head>");
+			writer.close();
+		} else {
+			response.sendError(HttpServletResponse.SC_NOT_FOUND,
+					"Page not exist");
+		}
+	}
+
+	/**
+	 * Initialize the servlet (if needed).
+	 */
+	@Override
+	public void init() throws ServletException {
+		super.init();
+
+		LINKS_NO = Integer.parseInt((String) getServletContext()
+				.getInitParameter("linksNO"));
+
+		try {
+
+			emf = Persistence.createEntityManagerFactory(PERSISTENT_UNIT_NAME);
+			getServletContext().setAttribute("emf", emf);
+
+			bots = new Bots();
+			getServletContext().setAttribute("bots", bots);
+
+			logger.info("Servlet initialized.");
+
+		} catch (Exception e) {
+			logger.fatal("Could not create entity manager factory", e);
+			throw new RuntimeException(e);
+		}
+
+	}
+
+	/**
+	 * Checks if given path is valid (Contains only characters which can be
+	 * names of links
+	 */
+	private boolean validPath(String path) {
+
+		final char lastChar = (char) ('a' + LINKS_NO - 1);
+
+		for (int i = 0; i < path.length(); i++) {
+			char processed = path.charAt(i);
+
+			if (processed < 'a' || processed > lastChar) {
+				return false;
+			}
+
+		}
+
+		return true;
+	}
+
+	private void writeLog(Collection<LoggedRequest> pageLog, Writer writer)
+			throws IOException {
+
+		final Map<String, Integer> numberOfBots = new HashMap<String, Integer>(
+				3);
+
+		StringBuilder log = new StringBuilder();
+
+		log.append("<h2>Visits of robots</h2>");
+		log.append("<table>");
+		for (LoggedRequest loggedRequest : pageLog) {
+			String botName = bots.getBotName(loggedRequest.getAgent());
+			if (botName != null) {
+				log.append("<tr>");
+				log.append("<td>").append(loggedRequest.getDate().toString())
+						.append("</td>");
+				log.append("<td>").append(botName).append("</td>");
+				log.append("</tr>");
+				countBot(numberOfBots, botName);
+			}
+		}
+		log.append("</table>");
+
+		writer.write("<h2>Number of visits of each bot</h2>");
+		writer.write(writeNumberOfVisits(numberOfBots).toString());
+		writer.write(log.toString());
+	}
+
+	/**
+	 * Writes number of visits of each bot
+	 * 
+	 * @return String builder with printed table of results
+	 */
+	private StringBuilder writeNumberOfVisits(Map<String, Integer> numberOfBots)
+			throws IOException {
+
+		StringBuilder result = new StringBuilder();
+
+		result.append("<table>");
+		/*
+		 * numberOfBots never will be empty so does not need to write tr
+		 * attribute inside table to make it always valid
+		 */
+		for (String bot : numberOfBots.keySet()) {
+			result.append("<tr><td>" + bot + "</td><td>" + numberOfBots.get(bot)
+					+ "</td></tr>");
+		}
+		result.append("</table>");
+		
+		return result;
+	}
+}
